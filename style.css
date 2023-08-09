@@ -1,0 +1,379 @@
+
+/* ZÁKLAD */
+* {https://mujweb.nkdojin.repl.co
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.moje-trida {
+  transition: transform 0.5s;
+}
+
+/* NAVIGACE */
+
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    padding: 15px;
+    background-color: #303030;
+    z-index: 30;
+}
+
+.navigace {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navigace li {
+    margin-right: 30px; /* volitelné - pro přidání mezer mezi položkami */
+}
+
+.navigace li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+/* VIDEO HOMEPAGE */
+.hlavniVideo {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Poměr stran 16:9 pro zachování správného poměru šířky a výšky videa */
+    overflow: hidden;
+  }
+  
+  #fullscreen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    background-attachment: fixed;
+    z-index: 20;
+    display: flex;
+    justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+    align-items: center;
+  }
+  
+  #end-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("media/homepicture.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 10;
+    justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+    align-items: center;
+  }
+
+/* KDO JSEM */
+
+.kdoJsem {
+    height: 500px;
+    background-color: #555555;
+    z-index: 25;
+}
+
+.kdoVlastneJsem {
+    color: white;
+    font-weight: bold;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+    display: flex;
+    padding-top: 35px;
+    justify-content: center;
+}
+
+.obsahKdoJsem {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+
+.levyBlok {
+    flex-basis: 40%;
+    padding-left: 50px;
+}
+
+.kdoJsemNadpisClanku {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 36px;
+    padding-top: 20px;
+}
+
+.levyBlok p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.pravyBlok img {
+    height: 400px;
+    padding: 50px;
+    padding-right: 75px;
+    padding-top: 35px;
+}
+
+/* SLEDUJ MĚ */
+
+.sledujme {
+    height: 150px;
+    background-color: rgb(240, 240, 245);
+}
+
+.sledujme h1 {
+    color: black;
+    font-weight: bold;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+/* SLEDUJ MĚ - ODKAZY */
+
+.odkazy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.odkazy a {
+    margin: 0 10px; /* Přidá mezeru 10px na levé a pravé straně odkazu */
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .instagram {
+    background-color: #E1306C;
+  }
+
+  .twitter {
+    background-color: 	#1DA1F2;
+  }
+  
+  .tiktok {
+    background-color: black;
+  }
+
+  .github {
+    background-color: #6cc644;
+  }
+
+  .discord {
+    background-color: #7289da;
+  }
+
+  .twitch {
+    background-color: #6441a5;
+  }
+
+  .steam {
+    background-color: #2a475e;
+  }
+
+  .xbox {
+    background: #107C10;
+  }
+
+  /* Kontakt */
+
+  .kontakt {
+    height: 300px;
+    background-color: #555555;
+  }
+
+  .kontakt h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+  }
+
+  .kontakt h2 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: 300;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .kontaktkontejner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kontakt button {
+    padding: 20px 30px;
+    text-decoration: none;
+    margin-top: 35px;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', Tahoma, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: rgb(0, 102, 255);
+    border: none;
+    border-radius: 10px;
+  }
+
+  .kontakt a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .kontakt button:hover {
+    background-color: rgb(75, 144, 247);
+  }
+
+  .footer {
+    height: 125px;
+    background-color: #303030;
+  }
+  
+  .footer p {
+    color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+  }
+
+
+
+
+  /************/
+  /* Projekty */
+  /************/
+
+  /* Nadpisy */
+
+  .projektyNadpis h1 {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 36px;
+  }
+
+  .projektyNadpis h2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  /* Soubory S Projekty */
+
+  .souborySProjekty {
+    display: flex;
+    justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+    align-items: center;
+    height: 600px;
+  }
+
+  .souborySProjekty h1 {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+/***********/
+/* Kontakt */
+/***********/
+
+/* Kontakt nadpis */
+
+.kontaktNadpis h1 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 36px;
+}
+
+.kontaktNadpis h2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+.formularKontaktu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #36abd6;
+  margin-bottom: 25px;
+}
+
+.contact-form-input {
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding-left: 5px;
+  border-color: #000000;
+}
+.contact-form textarea {
+  height: 150px;
+  padding-top: 5px;
+}
+.contact-form p {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
+  align-items: center;
+  text-align: center;
+}
