@@ -91,6 +91,7 @@ nav {
 }
 
 .kdoVlastneJsem {
+    margin-top: 0px;
     color: white;
     font-weight: bold;
     font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
@@ -139,6 +140,7 @@ nav {
 }
 
 .sledujme h1 {
+    margin-top: 0px;
     color: black;
     font-weight: bold;
     font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
@@ -214,6 +216,7 @@ nav {
   }
 
   .kontakt h1 {
+    margin-top: 0px;
     color: white;
     font-weight: bold;
     font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
@@ -267,6 +270,7 @@ nav {
   }
   
   .footer p {
+      margin-top: 0px
     color: rgb(200, 200, 200);
     display: flex;
     justify-content: center;
