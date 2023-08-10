@@ -24,28 +24,31 @@
     </script>
 
     <!-- NAVIGACE -->
+<nav class="navbar">
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navigace nam-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Domů</a></li>
+        <li class="nav-item"><a href="projekty.html" class="nav-link">Projekty</a></li>
+        <li class="nav-item"><a href="#" onclick="scrollToClass(event, 'odkazypresmerovani')" class="nav-link">Sociální sítě</a></li>
+        <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <script>
+        function scrollToClass(event, className) {
+            event.preventDefault();
 
-    <nav class="navbar">
-        <ul class="navigace nam-menu">
-            <li class="nav-item"><a href="index.html" class="nav-link">Domů</a></li>
-            <li class="nav-item"><a href="projekty.html" class="nav-link">Projekty</a></li>
-            <li class="nav-item"><a href="#" onclick="scrollToClass(event, 'odkazypresmerovani')" class="nav-link">Sociální sítě</a></li>
-            <script>
-                function scrollToClass(event, className) {
-                  event.preventDefault();
-              
-                  const element = document.querySelector('.' + className);
-                  const yOffset = -80; // Posunutí (můžete upravit podle potřeby)
-                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              
-                  window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
-                }
-              </script>
-            <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
-        </ul>
-    </nav>
+            const element = document.querySelector('.' + className);
+            const yOffset = -80; // Posunutí (můžete upravit podle potřeby)
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    <script src="script.js"></script>
+            window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
+        }
+    </script>
+</nav>
+<script src="script.js"></script>
 
     <!-- LANDING PAGE VIDEO -->
 <div class="hlavniVideo">
