@@ -58,6 +58,16 @@ nav {
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
+@media (max-width: 768px) {
+    .pravyBlok img {
+        display: none;
+    }
+
+    .pravyBlok {
+        display: none;
+    }
+}
+
 
 @media (max-width: 768px) {
     .navigace {
