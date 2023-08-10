@@ -96,6 +96,10 @@ nav {
     .nav-item {
         margin: 16px 0;
     }
+
+    .nav-menu.active {
+        Left: 0;
+    }
 }
 
 /* VIDEO HOMEPAGE */
