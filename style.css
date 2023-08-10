@@ -105,8 +105,19 @@ nav {
     }
 
     .levyBlok p {
-        width: 70%;
+        width: 85%;
     }
+
+    .levyBlok {
+        width: 85%;
+        
+    }
+
+    .pravyBlok img {
+        display: none;
+    }
+
+    
 
     
 }
