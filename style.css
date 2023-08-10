@@ -33,7 +33,7 @@ nav {
 }
 
 .hamburger {
-    display: none; /* Na větších obrazovkách nebude viditelný */
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -54,7 +54,7 @@ nav {
 }
 
 .navigace li {
-    margin-right: 30px; /* volitelné - pro přidání mezer mezi položkami */
+    margin-right: 30px;
 }
 
 .navigace li a {
@@ -65,13 +65,35 @@ nav {
 
 @media (max-width: 768px) {
     .navigace {
-        display: none; /* Skryje odkazy na menších obrazovkách */
+        display: none;
     }
     
     .hamburger {
-        display: flex; /* Zobrazí tlačítko hamburgeru */
+        display: flex;
+    }
+    
+    .nam-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* adjust this value as needed */
+        left: 0;
+        width: 100%;
+        background-color: #303030;
+        z-index: 20;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .nam-menu.active {
+        display: flex;
+    }
+    
+    .nam-menu li {
+        margin: 10px 0;
     }
 }
+
 
 
 /* VIDEO HOMEPAGE */
