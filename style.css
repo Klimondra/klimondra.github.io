@@ -117,7 +117,9 @@ nav {
         display: none;
     }
 
-    
+    .pravyBlok {
+        display: none;
+    }
 
     
 }
