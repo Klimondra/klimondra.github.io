@@ -537,11 +537,12 @@ nav {
 
 
     #end-image {
-        width: 100%
+        width: 100%;
     }
 
     .levyBlok p {
         width: 85%;
+        font-size: 18px;
     }
 
     .levyBlok {
@@ -563,6 +564,7 @@ nav {
 
     .obsahKdoJsem {
         padding: 0 7px;
+        display: block;
     }
 
     .levyBlok {
@@ -570,7 +572,7 @@ nav {
     }
 
     .kdoJsemNadpisClanku {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     
