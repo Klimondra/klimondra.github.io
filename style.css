@@ -73,11 +73,12 @@ nav {
     }
     
     .nam-menu {
-        display: flex;
+        display: none; /* Menu na začátku skryjeme */
         flex-direction: column;
         position: absolute;
-        top: 80px; /* adjust this value as needed */
-        left: 0;
+        top: 80px;
+        left: 50%; /* Posune menu na střed */
+        transform: translateX(-50%); /* Posune menu na střed */
         width: 100%;
         background-color: #303030;
         z-index: 20;
@@ -86,7 +87,7 @@ nav {
     }
     
     .nam-menu.active {
-        display: flex;
+        display: flex; /* Menu se zobrazí po kliknutí na hamburger */
     }
     
     .nam-menu li {
