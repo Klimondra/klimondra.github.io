@@ -380,6 +380,7 @@ nav {
 /* Kontakt nadpis */
 
 .kontaktNadpis h1 {
+  width: 90%;
   margin-top: 100px;
   display: flex;
   justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
