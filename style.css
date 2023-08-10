@@ -543,6 +543,10 @@ nav {
         width: 100%;
     }
 
+    .kdoJsem {
+        height: 600px;
+    }
+
     .levyBlok p {
         width: 85%;
         font-size: 18px;
@@ -574,9 +578,7 @@ nav {
         padding-right: 7px;
     }
 
-    .kdoJsem {
-        height: 550px;
-    }
+    
 
     .kdoJsemNadpisClanku {
         font-size: 22px;
