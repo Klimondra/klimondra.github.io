@@ -1,27 +1,20 @@
 
 /* ZÁKLAD */
-* {https://mujweb.nkdojin.repl.co
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .moje-trida {
-  transition: transform 0.5s;
+    transition: transform 0.5s;
 }
 
 /* NAVIGACE */
@@ -34,6 +27,22 @@ nav {
     padding: 15px;
     background-color: #303030;
     z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none; /* Na větších obrazovkách nebude viditelný */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: aliceblue;
+    margin: 3px 0;
 }
 
 .navigace {
@@ -41,6 +50,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .navigace li {
@@ -53,54 +63,16 @@ nav {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-}
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
+    .navigace {
+        display: none; /* Skryje odkazy na menších obrazovkách */
+    }
+    
     .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate (45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #303030;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-menu.active {
-        Left: 0;
+        display: flex; /* Zobrazí tlačítko hamburgeru */
     }
 }
+
 
 /* VIDEO HOMEPAGE */
 .hlavniVideo {
