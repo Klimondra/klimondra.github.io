@@ -90,6 +90,13 @@ nav {
     .nam-menu li {
         margin: 10px 0;
     }
+
+
+
+
+    .kontaktNadpis h1 {
+        width: 90%;
+    }
 }
 
 
@@ -380,7 +387,6 @@ nav {
 /* Kontakt nadpis */
 
 .kontaktNadpis h1 {
-  width: 90%;
   margin-top: 100px;
   display: flex;
   justify-content: center; /* Centrování obsahu na ose X (horizontálně) */
