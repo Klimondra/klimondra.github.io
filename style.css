@@ -495,3 +495,82 @@ nav {
 }
 
 
+@media (max-width: 768px) {
+    .navigace {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nam-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #303030;
+        z-index: 20;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .nam-menu.active {
+        display: flex;
+        left: 50%; /* Posune menu na střed */
+        transform: translateX(-50%); /* Posune menu na střed */
+    }
+    
+    .nam-menu li {
+        margin: 10px 0;
+    }
+
+
+
+
+    .kontaktNadpis h1 {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    #end-image {
+        width: 100%
+    }
+
+    .levyBlok p {
+        width: 85%;
+    }
+
+    .levyBlok {
+        width: 85%;
+        
+    }
+
+    .pravyBlok img {
+        display: none;
+    }
+
+    .pravyBlok {
+        display: none;
+    }
+
+    .pravyBlok {
+        display: none;
+    }
+
+    .obsahKdoJsem {
+        padding: 0 7px;
+    }
+
+    .levyBlok {
+        padding-right: 7px;
+    }
+
+    
+}
+
+
+
