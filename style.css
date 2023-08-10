@@ -13,10 +13,6 @@ html {
     box-sizing: border-box;
 }
 
-.moje-trida {
-    transition: transform 0.5s;
-}
-
 /* NAVIGACE */
 
 nav {
@@ -46,7 +42,6 @@ nav {
 }
 
 .navigace {
-    Left: 50%;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -74,12 +69,11 @@ nav {
     }
     
     .nam-menu {
-        display: none; /* Menu na začátku skryjeme */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 80px;
-        left: 50%; /* Posune menu na střed */
-        transform: translateX(-50%); /* Posune menu na střed */
+        top: 70px;
+        left: 0;
         width: 100%;
         background-color: #303030;
         z-index: 20;
@@ -88,7 +82,9 @@ nav {
     }
     
     .nam-menu.active {
-        display: flex; /* Menu se zobrazí po kliknutí na hamburger */
+        display: flex;
+        left: 50%; /* Posune menu na střed */
+        transform: translateX(-50%); /* Posune menu na střed */
     }
     
     .nam-menu li {
