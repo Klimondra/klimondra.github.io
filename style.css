@@ -139,6 +139,18 @@ nav {
         display: none;
     }
 
+    .pravyBlok {
+        display: none;
+    }
+
+    .obsahKdoJsem {
+        padding: 0 7px;
+    }
+
+    .levyBlok {
+        padding-right: 7px;
+    }
+
     
 }
 
