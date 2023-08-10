@@ -66,6 +66,10 @@ nav {
     .pravyBlok {
         display: none;
     }
+
+    .obsahKdoJsem {
+        padding: 0 7px;
+    }
 }
 
 
