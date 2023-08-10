@@ -145,11 +145,14 @@ nav {
 
     .obsahKdoJsem {
         padding: 0 7px;
+        display: block;
     }
 
     .levyBlok {
         padding-right: 7px;
     }
+
+
 
     
 }
