@@ -606,6 +606,8 @@ nav {
     align-items: center;*/
 }
 
+
+
 .poznamky h1 {
     display: block;
     text-align:left;
@@ -651,5 +653,93 @@ nav {
     color:#fff;
     font-weight: 550;
     text-decoration: none;
+}
+
+@media (max-width: 1286px) {
+    .poznamky {
+        height: 230px;
+    }
+
+    .navodKeStazeni p {
+        top: 350px;
+    }
+
+    .poznamky button {
+        top: 300px;
+    }
+}
+
+@media (max-width: 1151px) {
+    .poznamky {
+        height: 250px;
+    }
+
+    .navodKeStazeni p {
+        top: 380px;
+    }
+
+    .poznamky button {
+        top: 300px;
+    }
+}
+
+@media (max-width: 1053px) {
+    .poznamky {
+        height: 285px;
+    }
+
+    .navodKeStazeni p {
+        top: 410px;
+    }
+
+    .poznamky button {
+        top: 300px;
+    }
+}
+
+@media (max-width: 1026px) {
+    .poznamky {
+        height: 300px;
+    }
+
+    .navodKeStazeni p {
+        top: 410px;
+    }
+
+    .poznamky button {
+        top: 300px;
+    }
+}
+
+@media (max-width: 632px) {
+    .poznamky {
+        height: 330px;
+    }
+
+    .navodKeStazeni p {
+        top: 410px;
+        display:none;
+    }
+
+    .poznamky button {
+        top: 300px;
+        display: none;
+    }
+}
+
+@media (max-width: 302px) {
+    .poznamky {
+        height: 410px;
+    }
+
+    .navodKeStazeni p {
+        top: 410px;
+        display:none;
+    }
+
+    .poznamky button {
+        top: 300px;
+        display: none;
+    }
 }
 
