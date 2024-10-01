@@ -96,7 +96,7 @@
 }
 
 
-/* TODO: Udělat responzivitu a přidat obrázek do modrého pole */
+/* ABOUT ME */
 
 #aboutme {
     display: flex;
@@ -149,7 +149,7 @@
     color: #F4F4F6;
 }
 
-/* Responsive styles */
+/* ABOUT ME Responzivita */
 @media only screen and (max-width: 1024px) {
     #aboutme {
         flex-direction: column;
@@ -206,8 +206,63 @@
     }
 }
 
+/*
+
+WIP: PROJEKTY
 
 .projekty {
-    background-color: brown;
-    height: 200px;
+    background-color: #00171F;
+    height: 600px;
 }
+
+*/
+
+/* FOLLOW ME */
+.followme {
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+}
+
+.flwblock {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flwnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 72px;
+    color: #F4F4F6;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.flwpodnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #279AF1;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.flwicons {
+    padding: 50px;
+    display: flex;
+}
+
+.fa-brands {
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    background: #F4F4F6;
+    color: black;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* Barva pro paticku = #001015 */
