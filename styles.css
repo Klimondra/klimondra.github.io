@@ -83,9 +83,9 @@
     .HlavniPodnadpis {
         font-size: 19px;
     }
-  }
+}
 
-  @media only screen and (max-width: 460px) {
+@media only screen and (max-width: 460px) {
     .HlavniNadpis {
         font-size: 54px;
     }
@@ -93,10 +93,58 @@
     .HlavniPodnadpis {
         font-size: 18px;
     }
-  }
+}
 
 
+/* TODO: Udělat responzivitu a přidat obrázek do modrého pole */
 
-#dalsi {
-    height: 100px;
+#aboutme {
+    display:flex;
+    height: 480px;
+    flex-direction: row;
+    /*background-color: #000000;*/
+}
+
+.part23 {
+    height: 100%;
+    width: 70%;
+    background-color: #00171F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.part13 {
+    height: 100%;
+    width: 30%;
+    background-color: #279AF1;
+}
+
+.aboutblock {
+    padding: 50px 50px 50px 50px;
+    display:flex;
+    flex-direction: column;
+}
+
+.aboutnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 72px;
+    color: #F4F4F6;
+    margin-bottom: 10px;
+}
+
+.aboutpodnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #279AF1;
+    margin-bottom: 10px;
+}
+
+.abouttext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color:#F4F4F6
 }
