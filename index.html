@@ -22,6 +22,7 @@
     </header>
 
     <script>
+        // JavaScript pro změnu barvy pozadí při scrollování
         const header = document.querySelector('.header');
 
         window.addEventListener('scroll', () => {
@@ -32,6 +33,82 @@
             }
         });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("btnMajor").addEventListener("click", function () {
+                const target = document.getElementById("aboutme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("btnMinor").addEventListener("click", function () {
+                const target = document.getElementById("followme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+        
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("navWhoBtn").addEventListener("click", function () {
+                const target = document.getElementById("aboutme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("navFlwBtn").addEventListener("click", function () {
+                const target = document.getElementById("followme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("navLogo").addEventListener("click", function () {
+                const target = document.getElementById("Landing");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+
         // Přepínání menu
         const menuIcon = document.getElementById('menuIcon');
         const navbar = document.querySelector('.navbar');
@@ -39,7 +116,8 @@
         menuIcon.addEventListener('click', () => {
             navbar.classList.toggle('active');
         });
-    </script>
+
+        </script>
 
     <section id="Landing">
         <div class="landContent">
