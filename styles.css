@@ -4,6 +4,115 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVIGACE */
+/* Původní styly zůstávají stejné */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.4s ease;
+}
+
+#navLogo {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F4F4F6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F4F4F6;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background: #F4F4F6;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar a:active::after {
+    background: #279AF1;
+}
+
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Přidáme styly pro hamburger menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #F4F4F6;
+}
+
+/* Responzivní styly */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 30px; /* Zmenšíme padding */
+    }
+
+    .navbar {
+        display: none; /* Skryjeme navigaci pro mobilní verzi */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Nastavíme pozici pod hlavičku */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Pozadí menu */
+        padding: 20px;
+        width: 100%; /* Zabereme celou šířku obrazovky */
+    }
+
+    .navbar a {
+        margin: 10px 0; /* Vertikální mezera mezi odkazy */
+    }
+
+    /* Zobrazíme hamburger menu ikonu */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Když je menu otevřené */
+    .navbar.active {
+        display: flex; /* Zobrazí se menu */
+    }
+}
+
+
 /* LANDING PAGE */
 
 #Landing{
@@ -46,7 +155,7 @@
     
 }
 
-.btnMajor {
+#btnMajor {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     height: 50px;
@@ -58,9 +167,15 @@
     border: solid 1px #279AF1;
     padding: 10px;
     border-radius: 5px;
+    transition: scale 0.4s ease, rotate 0.1s ease;
 }
 
-.btnMinor {
+#btnMajor:hover {
+    scale: 1.1;
+    rotate: -1.5deg;
+}
+
+#btnMinor {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     height: 50px;
@@ -71,6 +186,12 @@
     color: #F4F4F6;
     background-color: rgba(0,0,0,0);
     border-radius: 5px;
+    transition: scale 0.4s ease, rotate 0.1s ease;
+}
+
+#btnMinor:hover {
+    scale: 1.1;
+    rotate: -1.5deg;
 }
 
 /* LANDING PAGE RESPONIZIVITA */
@@ -229,7 +350,7 @@ WIP: PROJEKTY
 
 
 /* FOLLOW ME */
-.followme {
+#followme {
     display: flex;
     flex-direction: row;
     height: 480px;
@@ -291,6 +412,15 @@ WIP: PROJEKTY
     color: black;
     border-radius: 50%;
     margin-left: 15px;
+    transition: border-radius 0.4s ease;
+}
+
+.fa-brands:hover {
+    border-radius: 25%;
+}
+
+.fa-brands:active {
+    border-radius: 0%;
 }
 
 /* Responsive styles */

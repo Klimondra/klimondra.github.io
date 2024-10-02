@@ -8,16 +8,50 @@
     <script src="https://kit.fontawesome.com/2fe6cb1a76.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header class="header">
+        <a href="" id="navLogo">Klimondra</a>
+        
+        <nav class="navbar">
+            <a id="navWhoBtn">Kdo jsem</a>
+            <a id="navFlwBtn">Sociální sítě</a>
+        </nav>
+    
+        <div class="menu-icon" id="menuIcon">
+            &#9776;
+        </div>
+    </header>
+
+    <script>
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Přepínání menu
+        const menuIcon = document.getElementById('menuIcon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+
     <section id="Landing">
         <div class="landContent">
             <h1 class="HlavniNadpis">Klimondra</h1>
             <p class="HlavniPodnadpis">Takovej nějakej programátor :D</p>
             <div class="landBtns">
-                <button href="#" class="btnMajor">Kdo jsem?</a>
-                <button href="#" class="btnMinor">Sleduj mě</a>
+                <button id="btnMajor">Kdo jsem?</button>
+                <button id="btnMinor">Sleduj mě</button>
             </div>
         </div>
     </section>
+
     <section id="aboutme">
         <span class="part23">
             <div class="aboutblock">
@@ -34,18 +68,8 @@
         </span>
         <span class="part13"></span>
     </section>
-    <!-- 
 
-    WIP: PROJEKTY
-
-    <section class="projekty">
-        <h2>Projekty</h2>
-        <h3>VĚCI CO JSEM VYTVOŘIL</h3>
-    </section> 
-    
-    -->
-
-    <section class="followme">
+    <section id="followme">
         <span class="part13"></span>
         <span class="part23">
             <div class="flwblock">
@@ -53,15 +77,16 @@
                 <h3 class="flwpodnadpis">MOJE SOCIÁLNÍ SÍTĚ</h3>
             </div>
             <div class="flwicons">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-threads"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-reddit"></i></a>
-                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://www.instagram.com/klimondra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.threads.net/@klimondra" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                <a href="https://www.tiktok.com/@klimondracz" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://github.com/Klimondra" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.reddit.com/user/UnrealOndra/" target="_blank"><i class="fa-brands fa-reddit"></i></a>
+                <a href="https://www.twitch.tv/klimondra" target="_blank"><i class="fa-brands fa-twitch"></i></a>
             </div>
         </span>
     </section>
+
     <section class="footer">
         <h4 class="footertext">Vyvtořil Klimondra s HTML & CSS & <i class="fa-solid fa-heart"></i> v roce 2024</h4>
     </section>
