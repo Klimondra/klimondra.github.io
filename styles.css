@@ -95,6 +95,16 @@
     }
 }
 
+@media only screen and (max-width: 315px) {
+    .HlavniNadpis {
+        font-size: 44px;
+    }
+
+    .HlavniPodnadpis {
+        font-size: 17px;
+    }
+}
+
 
 /* ABOUT ME */
 
@@ -217,11 +227,26 @@ WIP: PROJEKTY
 
 */
 
+
 /* FOLLOW ME */
 .followme {
     display: flex;
     flex-direction: row;
     height: 480px;
+}
+
+.part13 {
+    width: 30%;
+    background-color: #279AF1;
+}
+
+.part23 {
+    width: 70%;
+    background-color: #00171F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .flwblock {
@@ -230,13 +255,16 @@ WIP: PROJEKTY
     flex-direction: column;
 }
 
+.flwnadpis, .flwpodnadpis {
+    text-align: right;
+}
+
 .flwnadpis {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 72px;
     color: #F4F4F6;
     margin-bottom: 10px;
-    text-align: right;
 }
 
 .flwpodnadpis {
@@ -245,16 +273,16 @@ WIP: PROJEKTY
     font-size: 23px;
     color: #279AF1;
     margin-bottom: 10px;
-    text-align: right;
 }
 
 .flwicons {
-    padding: 50px;
     display: flex;
+    justify-content: flex-end;
+    padding: 0 50px 50px 50px;
 }
 
 .fa-brands {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     font-size: 30px;
     width: 70px;
     text-align: center;
@@ -265,4 +293,100 @@ WIP: PROJEKTY
     margin-left: 15px;
 }
 
-/* Barva pro paticku = #001015 */
+/* Responsive styles */
+@media only screen and (max-width: 1024px) {
+    .followme {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .part13, .part23 {
+        width: 100%;
+        height: auto;
+    }
+
+    .part13 {
+        display: none; /* Hide part13 on medium and smaller screens */
+    }
+
+    .flwblock {
+        align-items: right;
+        padding: 30px;
+    }
+
+    .flwnadpis {
+        font-size: 56px;
+        margin-top: 20px;
+    }
+
+    .flwpodnadpis {
+        font-size: 20px;
+        
+    }
+
+    .flwicons {
+        justify-content: center;
+        padding: 30px 30px;
+    }
+
+    .fa-brands {
+        width: 60px; /* Slightly smaller icons for medium screens */
+        font-size: 26px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .flwblock {
+        padding: 20px;
+    }
+
+    .flwnadpis {
+        font-size: 40px; /* Smaller heading for tablets */
+    }
+
+    .flwpodnadpis {
+        font-size: 18px;
+    }
+
+    .fa-brands {
+        width: 60px; /* Smaller icons for small screens */
+        font-size: 30px;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .flwblock {
+        padding: 10px;
+    }
+
+    .flwnadpis {
+        font-size: 32px; /* Even smaller heading for phones */
+    }
+
+    .flwpodnadpis {
+        font-size: 16px;
+    }
+
+    .fa-brands {
+        width: 60px; /* Smaller icons for small screens */
+        font-size: 30px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .flwicons {
+        justify-content: center;
+        padding: 30px 30px;
+        flex-wrap: wrap;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: #001015;
+}
