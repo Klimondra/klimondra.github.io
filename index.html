@@ -2,113 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/2fe6cb1a76.js" crossorigin="anonymous"></script>
-    <title>Klimondrův Web</title>
 </head>
 <body>
+    <header class="header">
+        <a href="" id="navLogo">Klimondra</a>
+        
+        <nav class="navbar">
+            <a id="navWhoBtn">Kdo jsem</a>
+            <a id="navFlwBtn">Sociální sítě</a>
+        </nav>
+    
+        <div class="menu-icon" id="menuIcon">
+            &#9776;
+        </div>
+    </header>
 
     <script>
-        window.onload = function() {
-            // Zkontrolujeme, zda se v URL adrese nachází identifikátor "#navigovat_na_tridu"
-            if (window.location.href.includes("#social_media")) {
-                var cilovaTrida = document.querySelector('.odkazypresmerovani');
-                if (cilovaTrida) {
-                    cilovaTrida.scrollIntoView(); // Přesune stránku na prvek s třídou "cilova_trida"
-                }
+        // JavaScript pro změnu barvy pozadí při scrollování
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-        };
-    </script>
+        });
 
-    <!-- NAVIGACE -->
-<nav class="navbar">
-    <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <ul class="navigace nam-menu">
-        <li class="nav-item"><a href="index.html" class="nav-link">Domů</a></li>
-        <li class="nav-item"><a href="projekty.html" class="nav-link">Projekty</a></li>
-        <li class="nav-item"><a href="#" onclick="scrollToClass(event, 'odkazypresmerovani')" class="nav-link">Sociální sítě</a></li>
-        <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
-    </ul>
-    <script>
-        function scrollToClass(event, className) {
-            event.preventDefault();
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("btnMajor").addEventListener("click", function () {
+                const target = document.getElementById("aboutme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
 
-            const element = document.querySelector('.' + className);
-            const yOffset = -80; // Posunutí (můžete upravit podle potřeby)
-            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("btnMinor").addEventListener("click", function () {
+                const target = document.getElementById("followme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+        
 
-            window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
-        }
-    </script>
-</nav>
-<script src="script.js"></script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("navWhoBtn").addEventListener("click", function () {
+                const target = document.getElementById("aboutme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
 
-    <!-- LANDING PAGE VIDEO -->
-<div class="hlavniVideo">
-    <!-- Video element -->
-    <video id="fullscreen-video" autoplay muted>
-      <source src="media/videonahomepage.webm" type="video/webm">
-    </video>
-  
-    <!-- Div pro zobrazení obrázku po skončení videa -->
-    <div id="end-image" class="image"></div>
-  
-    <script src="videoscript.js"></script>
-  </div>
-  
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("navFlwBtn").addEventListener("click", function () {
+                const target = document.getElementById("followme");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
 
-    <!-- KDO JSEM -->
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("navLogo").addEventListener("click", function () {
+                const target = document.getElementById("Landing");
+        
+                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+        
+                // Hladké posunutí na vypočítanou pozici
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
 
-    <div class="kdoJsem">
-        <h1 class="kdoVlastneJsem">Kdo vlastně jsem?</h1>
-        <div class="obsahKdoJsem">
-            <div class="levyBlok">
-                <h1 class="kdoJsemNadpisClanku">Jsem Člověk kterého baví<br>IT a programování</h1>
-                <div class="odkazypresmerovani"></div>
-                <p>Ani nevim jak dlouho se vlastně tomuhle věnuji ale hlavní podle mě je, že mě to baví. Zkouším například dělat hry v Unity a pokud toto čtete tak jsem dokázal vytvořit nějakou jednoduchou webovou stránku. Taky mě zajímá video tvorba ale s tím na internet nelezu. Pokud vás zajímá něco z mé tvorby můžete se podívat tady do projektů</p>
+        // Přepínání menu
+        const menuIcon = document.getElementById('menuIcon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        </script>
+
+    <section id="Landing">
+        <div class="landContent">
+            <h1 class="HlavniNadpis">Klimondra</h1>
+            <p class="HlavniPodnadpis">Takovej nějakej programátor :D</p>
+            <div class="landBtns">
+                <button id="btnMajor">Kdo jsem?</button>
+                <button id="btnMinor">Sleduj mě</button>
             </div>
-            <div class="pravyBlok">
-                <img src="media/kdojsempictue.png" alt="Nějaký fotky">
+        </div>
+    </section>
+
+    <section id="aboutme">
+        <span class="part23">
+            <div class="aboutblock">
+                <h2 class="aboutnadpis">Kdo jsem?</h2>
+                <h3 class="aboutpodnadpis">PROGRAMÁTOR - TECH NADŠENEC - <s>DOKONALÝ ČLOVĚK</s></h3>
+                <p class="abouttext">Jsem student, který studuje programování a IT. Tenhle obor mě začal zajímat, když mi bylo asi 10 let. Tento web vznikl vlastně jenom proto, že jsem se nudil. Možná tu do budoucna přibyde více funkcí a zajímavostí. Kromě programování a technologií mě zajímá také politika, jak v ČR, tak v zahraničí. Proto také dávám na Instagram poměrně často různé politické memes a zprávy.</p>
             </div>
-        </div>
-    </div>
+        </span>
+        <span class="part13"></span>
+    </section>
 
-    <!-- SLEDUJ MĚ-->
+    <section id="followme">
+        <span class="part13"></span>
+        <span class="part23">
+            <div class="flwblock">
+                <h2 class="flwnadpis">Kde mě najít?</h2>
+                <h3 class="flwpodnadpis">MOJE SOCIÁLNÍ SÍTĚ</h3>
+            </div>
+            <div class="flwicons">
+                <a href="https://www.instagram.com/klimondra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.threads.net/@klimondra" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                <a href="https://www.tiktok.com/@klimondracz" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://github.com/Klimondra" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.reddit.com/user/UnrealOndra/" target="_blank"><i class="fa-brands fa-reddit"></i></a>
+                <a href="https://www.twitch.tv/klimondra" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+            </div>
+        </span>
+    </section>
 
-    <div class="sledujme">
-        <h1>Na těchto sítích mě můžeš sledovat!</h1>
-        <div class="odkazy">
-        <div>
-            <a href="https://www.instagram.com/klimondra/" class="fa instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/klimondracz" class="fa twitter" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.tiktok.com/@klimondracz" class="fa tiktok" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://github.com/Klimondra" class="fa github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-            <a href="https://discord.gg/uSVxYPyKRN" class="fa discord" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://www.twitch.tv/klimondra" class="fa twitch" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitch"></i></a>
-            <a href="https://steamcommunity.com/id/klimondra/" class="fa steam" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-steam"></i></a>        </div>
-        </div>
-        </div>
-
-    <!-- Kontaktuj mě-->
-
-    <div class="kontakt">
-        <h1>Kontaktuj mě zde!</h1>
-        <h2>Ať už potřebuješ s něčím pomoci, nebo chceš pokecat můžeš mi zde napsat! <br>Samozřejmě mi můžeš napsat na některou z mých sociálních sítí</h2>
-        <div class="kontaktkontejner"><button><a href="kontakt.html"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>  Kontakt</a></button></div>
-    </div>
-
-    <!-- Patička -->
-    <div class="footer">
-        <p class="patickatext">Tuto stránku naprogramoval pomocí HTML a CSS Klimondra v roce 2023.  Stránka nesbírá žádná uživatelská data.</p>
-    </div>
-    
-    
+    <section class="footer">
+        <h4 class="footertext">Vyvtořil Klimondra s HTML & CSS & <i class="fa-solid fa-heart"></i> v roce 2024</h4>
+    </section>
 </body>
 </html>

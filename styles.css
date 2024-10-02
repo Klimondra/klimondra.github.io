@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVIGACE */
+/* Původní styly zůstávají stejné */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.4s ease;
+}
+
+#navLogo {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F4F4F6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F4F4F6;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background: #F4F4F6;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar a:active::after {
+    background: #279AF1;
+}
+
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Přidáme styly pro hamburger menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #F4F4F6;
+}
+
+/* Responzivní styly */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 30px; /* Zmenšíme padding */
+    }
+
+    .navbar {
+        display: none; /* Skryjeme navigaci pro mobilní verzi */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Nastavíme pozici pod hlavičku */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Pozadí menu */
+        padding: 20px;
+        width: 100%; /* Zabereme celou šířku obrazovky */
+    }
+
+    .navbar a {
+        margin: 10px 0; /* Vertikální mezera mezi odkazy */
+    }
+
+    /* Zobrazíme hamburger menu ikonu */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Když je menu otevřené */
+    .navbar.active {
+        display: flex; /* Zobrazí se menu */
+    }
+}
+
+
+/* LANDING PAGE */
+
+#Landing{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #00171F;
+    justify-content: center;
+}
+
+.landContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.HlavniNadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 108px;
+    text-align: center;
+    color: #279AF1;
+}
+
+.HlavniPodnadpis {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 21px;
+    color: #F4F4F6;
+}
+
+.landBtns {
+    width: 260px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#btnMajor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: #F4F4F6;
+    background-color: #279AF1;
+    border: solid 1px #279AF1;
+    padding: 10px;
+    border-radius: 5px;
+    transition: scale 0.4s ease, rotate 0.1s ease;
+}
+
+#btnMajor:hover {
+    scale: 1.1;
+    rotate: -1.5deg;
+}
+
+#btnMinor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px #279AF1;
+    color: #F4F4F6;
+    background-color: rgba(0,0,0,0);
+    border-radius: 5px;
+    transition: scale 0.4s ease, rotate 0.1s ease;
+}
+
+#btnMinor:hover {
+    scale: 1.1;
+    rotate: -1.5deg;
+}
+
+/* LANDING PAGE RESPONIZIVITA */
+
+@media only screen and (max-width: 660px) {
+    .HlavniNadpis {
+        font-size: 72px;
+    }
+
+    .HlavniPodnadpis {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .HlavniNadpis {
+        font-size: 54px;
+    }
+
+    .HlavniPodnadpis {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 315px) {
+    .HlavniNadpis {
+        font-size: 44px;
+    }
+
+    .HlavniPodnadpis {
+        font-size: 17px;
+    }
+}
+
+
+/* ABOUT ME */
+
+#aboutme {
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+}
+
+/* Style for desktop */
+.part23 {
+    height: 100%;
+    width: 70%;
+    background-color: #00171F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.part13 {
+    height: 100%;
+    width: 30%;
+    background-color: #279AF1;
+}
+
+.aboutblock {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 72px;
+    color: #F4F4F6;
+    margin-bottom: 10px;
+}
+
+.aboutpodnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #279AF1;
+    margin-bottom: 10px;
+}
+
+.abouttext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #F4F4F6;
+}
+
+/* ABOUT ME Responzivita */
+@media only screen and (max-width: 1024px) {
+    #aboutme {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .part23, .part13 {
+        width: 100%;
+        height: auto;
+    }
+
+    .part13 {
+        display: none; /* Hide the part13 on medium screens */
+    }
+
+    .aboutnadpis {
+        font-size: 56px; /* Smaller heading for medium screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutblock {
+        padding: 20px;
+    }
+
+    .aboutnadpis {
+        font-size: 40px; /* Smaller heading for small screens */
+    }
+
+    .aboutpodnadpis {
+        font-size: 18px;
+    }
+
+    .abouttext {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .aboutblock {
+        padding: 10px;
+    }
+
+    .aboutnadpis {
+        font-size: 32px; /* Even smaller heading for very small screens */
+    }
+
+    .aboutpodnadpis {
+        font-size: 16px;
+    }
+
+    .abouttext {
+        font-size: 14px;
+    }
+}
+
+/*
+
+WIP: PROJEKTY
+
+.projekty {
+    background-color: #00171F;
+    height: 600px;
+}
+
+*/
+
+
+/* FOLLOW ME */
+#followme {
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+}
+
+.part13 {
+    width: 30%;
+    background-color: #279AF1;
+}
+
+.part23 {
+    width: 70%;
+    background-color: #00171F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flwblock {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flwnadpis, .flwpodnadpis {
+    text-align: right;
+}
+
+.flwnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 72px;
+    color: #F4F4F6;
+    margin-bottom: 10px;
+}
+
+.flwpodnadpis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #279AF1;
+    margin-bottom: 10px;
+}
+
+.flwicons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 50px 50px 50px;
+}
+
+.fa-brands {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    background: #F4F4F6;
+    color: black;
+    border-radius: 50%;
+    margin-left: 15px;
+    transition: border-radius 0.4s ease;
+}
+
+.fa-brands:hover {
+    border-radius: 25%;
+}
+
+.fa-brands:active {
+    border-radius: 0%;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 1024px) {
+    .followme {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .part13, .part23 {
+        width: 100%;
+        height: auto;
+    }
+
+    .part13 {
+        display: none; /* Hide part13 on medium and smaller screens */
+    }
+
+    .flwblock {
+        align-items: right;
+        padding: 30px;
+    }
+
+    .flwnadpis {
+        font-size: 56px;
+        margin-top: 20px;
+    }
+
+    .flwpodnadpis {
+        font-size: 20px;
+        
+    }
+
+    .flwicons {
+        justify-content: center;
+        padding: 30px 30px;
+    }
+
+    .fa-brands {
+        width: 60px; /* Slightly smaller icons for medium screens */
+        font-size: 26px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .flwblock {
+        padding: 20px;
+    }
+
+    .flwnadpis {
+        font-size: 40px; /* Smaller heading for tablets */
+    }
+
+    .flwpodnadpis {
+        font-size: 18px;
+    }
+
+    .fa-brands {
+        width: 60px; /* Smaller icons for small screens */
+        font-size: 30px;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .flwblock {
+        padding: 10px;
+    }
+
+    .flwnadpis {
+        font-size: 32px; /* Even smaller heading for phones */
+    }
+
+    .flwpodnadpis {
+        font-size: 16px;
+    }
+
+    .fa-brands {
+        width: 60px; /* Smaller icons for small screens */
+        font-size: 30px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .flwicons {
+        justify-content: center;
+        padding: 30px 30px;
+        flex-wrap: wrap;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: #001015;
+}
+
+.footertext {
+    color:#F4F4F6;
+    text-align: center;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .footertext {
+        font-size: 15px;
+    }
+}
