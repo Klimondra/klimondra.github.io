@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klimondra</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/2fe6cb1a76.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="header">
+  <a href="" id="navLogo">Klimondra</a>
+
+  <nav class="navbar">
+    <a id="navWhoBtn">Kdo jsem</a>
+    <a id="navFlwBtn">Sociální sítě</a>
+  </nav>
+
+  <div class="menu-icon" id="menuIcon">
+    &#9776;
+  </div>
+</header>
+
+<script>
+  // JavaScript pro změnu barvy pozadí při scrollování
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("navWhoBtn").addEventListener("click", function () {
+      const target = document.getElementById("aboutme");
+
+      // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+
+      // Hladké posunutí na vypočítanou pozici
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("navFlwBtn").addEventListener("click", function () {
+      const target = document.getElementById("followme");
+
+      // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+
+      // Hladké posunutí na vypočítanou pozici
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("navLogo").addEventListener("click", function () {
+      const target = document.getElementById("Landing");
+
+      // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
+
+      // Hladké posunutí na vypočítanou pozici
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  // Přepínání menu
+  const menuIcon = document.getElementById('menuIcon');
+  const navbar = document.querySelector('.navbar');
+
+  menuIcon.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+
+</script>
+
+<section id="BioPage">
+  <div id="BioWindow">
+    </a>
+    <a href="index.html" class="bioitem">
+      <i class="fa-solid fa-brands2 fa-globe"></i>
+      <p>Můj web</p>
+    </a>
+    <a href="https://ngl.link/klimondra15527" class="bioitem">
+      <i class="fa-solid fa-brands2 fa-question"></i>
+      <p>NGL - Anonymní otázky</p>
+    </a>
+    <a href="https://www.instagram.com/klimondra/" class="bioitem">
+      <i class="fa-brands fa-brands2 fa-instagram"></i>
+      <p>Instagram</p>
+    </a>
+    </a>
+    <a href="https://www.threads.net/@klimondra" class="bioitem">
+      <i class="fa-brands fa-brands2 fa-threads"></i>
+      <p>Threads</p>
+    </a>
+    </a>
+    <a href="https://www.tiktok.com/@klimondracz" class="bioitem">
+      <i class="fa-brands fa-brands2 fa-tiktok"></i>
+      <p>Tiktok</p>
+    </a>
+    </a>
+    <a href="https://github.com/Klimondra" class="bioitem">
+      <i class="fa-brands fa-brands2 fa-github"></i>
+      <p>Github</p>
+    </a>
+    </a>
+    <a href="https://www.twitch.tv/klimondra" class="bioitem">
+      <i class="fa-brands fa-brands2 fa-twitch"></i>
+      <p>Twitch</p>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
