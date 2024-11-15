@@ -81,7 +81,7 @@ html {
 }
 
 /* Responzivní styly */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .header {
         padding: 20px 30px; /* Zmenšíme padding */
     }
@@ -595,4 +595,95 @@ WIP: PROJEKTY
 .fa-brands2 {
     font-size: 38px;
     color: #F4F4F6;
+}
+
+/*+*+*+*+*+*+*+*+*/
+/*    Projekty   */
+/*+*+*+*+*+*+*+*+*/
+
+#projektyPage {
+    background-color: #00171F;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projektyNadpis {
+    color: #F4F4F6;
+    margin-top: 130px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#projektyNadpis h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+#projektyNadpis p {
+    font-size: 16px;
+}
+
+#projektyKarty {
+    margin-top: 40px;
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projektyKarta {
+    width: 375px;
+    height: 400px;
+    background-color: #F4F4F6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px ;
+}
+
+.projektyKarta img {
+    width: 90%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.projektyKarta h3 {
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+}
+
+.projektyKarta p {
+    text-align: start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+    color: #676767;
+}
+
+.projektyKarta a {
+    display:flex;
+    justify-content: center;
+    background-color: #279AF1;
+    color: #F4F4F6;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+    border-radius: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.projektyKarta a i {
+    margin-right: 5px;
 }
