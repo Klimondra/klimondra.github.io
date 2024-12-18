@@ -1,5 +1,27 @@
 @charset "UTF-8";
 /* Proměnné */
+/* Animace */
+@keyframes fadeSlideLeft {
+  0% {
+    transform: translateX(-2%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeSlideRight {
+  0% {
+    transform: translateX(2%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Základní styly */
 * {
   margin: 0;
   padding: 0;
@@ -137,6 +159,7 @@ html {
 }
 
 .HlavniNadpis {
+  animation: slideDown 1s ease-out forwards;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
   font-size: 108px;
@@ -251,6 +274,7 @@ html {
 }
 
 .aboutnadpis {
+  animation: fadeSlideLeft ease-in-out 1s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 72px;
@@ -366,6 +390,7 @@ WIP: PROJEKTY
 }
 
 .flwnadpis {
+  animation: fadeSlideRight ease-in-out 1s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 72px;
