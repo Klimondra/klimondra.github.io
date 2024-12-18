@@ -1,3 +1,8 @@
+/* Proměnné */
+$darkColor: #00171F;
+$mainBlueColor: #279AF1;
+$whiteColor: #F4F4F6;
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +35,7 @@ html {
 #navLogo {
   font-size: 24px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #F4F4F6;
+  color: $whiteColor;
   font-weight: bold;
   text-decoration: none;
 }
@@ -41,7 +46,7 @@ html {
   a {
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #F4F4F6;
+    color: $whiteColor;
     font-weight: 500;
     text-decoration: none;
     margin-left: 30px;
@@ -55,7 +60,7 @@ html {
       left: 0%;
       width: 0;
       height: 2px;
-      background: #F4F4F6;
+      background: $whiteColor;
       transition: width 0.3s ease, left 0.3s ease;
     }
 
@@ -65,7 +70,7 @@ html {
     }
 
     &:active::after {
-      background: #279AF1;
+      background: $mainBlueColor;
     }
   }
 }
@@ -80,7 +85,7 @@ html {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  color: #F4F4F6;
+  color: $whiteColor;
 }
 
 /* Responzivní styly */
@@ -143,7 +148,7 @@ html {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #00171F;
+  background-color: $darkColor;
   justify-content: center;
 }
 
@@ -159,14 +164,14 @@ html {
   font-weight: 700;
   font-size: 108px;
   text-align: center;
-  color: #279AF1;
+  color: $mainBlueColor;
 }
 
 .HlavniPodnadpis {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: 21px;
-  color: #F4F4F6;
+  color: $whiteColor;
 }
 
 .landBtns {
@@ -184,9 +189,9 @@ html {
   width: 120px;
   text-align: center;
   text-decoration: none;
-  color: #F4F4F6;
-  background-color: #279AF1;
-  border: solid 1px #279AF1;
+  color: $whiteColor;
+  background-color: $mainBlueColor;
+  border: solid 1px $mainBlueColor;
   padding: 10px;
   border-radius: 5px;
   transition: scale 0.4s ease, rotate 0.1s ease;
@@ -204,8 +209,8 @@ html {
   width: 120px;
   text-align: center;
   text-decoration: none;
-  border: solid 1px #279AF1;
-  color: #F4F4F6;
+  border: solid 1px $mainBlueColor;
+  color: $whiteColor;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 5px;
   transition: scale 0.4s ease, rotate 0.1s ease;
@@ -261,7 +266,7 @@ html {
 .part23 {
   height: 100%;
   width: 70%;
-  background-color: #00171F;
+  background-color: $darkColor;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,7 +275,7 @@ html {
 .part13 {
   height: 100%;
   width: 30%;
-  background-color: #279AF1;
+  background-color: $mainBlueColor;
 }
 
 .aboutblock {
@@ -283,7 +288,7 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 72px;
-  color: #F4F4F6;
+  color: $whiteColor;
   margin-bottom: 10px;
 }
 
@@ -291,7 +296,7 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 23px;
-  color: #279AF1;
+  color: $mainBlueColor;
   margin-bottom: 10px;
 }
 
@@ -299,7 +304,7 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #F4F4F6;
+  color: $whiteColor;
 }
 
 /* ABOUT ME Responzivita */
@@ -373,7 +378,7 @@ html {
 WIP: PROJEKTY
 
 .projekty {
-    background-color: #00171F;
+    background-color: $darkColor;
     height: 600px;
 }
 
@@ -389,12 +394,12 @@ WIP: PROJEKTY
 
 .part13 {
   width: 30%;
-  background-color: #279AF1;
+  background-color: $mainBlueColor;
 }
 
 .part23 {
   width: 70%;
-  background-color: #00171F;
+  background-color: $darkColor;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,7 +420,7 @@ WIP: PROJEKTY
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 72px;
-  color: #F4F4F6;
+  color: $whiteColor;
   margin-bottom: 10px;
 }
 
@@ -423,7 +428,7 @@ WIP: PROJEKTY
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 23px;
-  color: #279AF1;
+  color: $mainBlueColor;
   margin-bottom: 10px;
 }
 
@@ -439,7 +444,7 @@ WIP: PROJEKTY
   width: 70px;
   text-align: center;
   text-decoration: none;
-  background: #F4F4F6;
+  background: $whiteColor;
   color: black;
   border-radius: 50%;
   margin-left: 15px;
@@ -563,7 +568,7 @@ WIP: PROJEKTY
 }
 
 .footertext {
-  color: #F4F4F6;
+  color: $whiteColor;
   text-align: center;
   padding: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -583,7 +588,7 @@ WIP: PROJEKTY
 #BioPage {
   width: 100%;
   min-height: 100vh;
-  background-color: #00171F;
+  background-color: $darkColor;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -593,7 +598,7 @@ WIP: PROJEKTY
   min-height: 65vh;
   width: 520px;
   border-radius: 25px;
-  background-color: #F4F4F6;
+  background-color: $whiteColor;
   display: flex;
   flex-direction: column;
   padding: 15px 15px 0 15px;
@@ -607,7 +612,7 @@ WIP: PROJEKTY
   margin-bottom: 15px;
   min-height: 70px;
   border-radius: 10px;
-  background-color: #279AF1;
+  background-color: $mainBlueColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -626,7 +631,7 @@ WIP: PROJEKTY
 
   p {
     text-align: end;
-    color: #F4F4F6;
+    color: $whiteColor;
     font-size: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
@@ -635,7 +640,7 @@ WIP: PROJEKTY
 
 .fa-brands2 {
   font-size: 38px;
-  color: #F4F4F6;
+  color: $whiteColor;
 }
 
 /*+*+*+*+*+*+*+*+*/
@@ -643,7 +648,7 @@ WIP: PROJEKTY
 /*+*+*+*+*+*+*+*+*/
 
 #projektyPage {
-  background-color: #00171F;
+  background-color: $darkColor;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -652,7 +657,7 @@ WIP: PROJEKTY
 }
 
 #projektyNadpis {
-  color: #F4F4F6;
+  color: $whiteColor;
   margin-top: 130px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -680,7 +685,7 @@ WIP: PROJEKTY
 .projektyKarta {
   width: 375px;
   height: 400px;
-  background-color: #F4F4F6;
+  background-color: $whiteColor;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -713,8 +718,8 @@ WIP: PROJEKTY
   a {
     display: flex;
     justify-content: center;
-    background-color: #279AF1;
-    color: #F4F4F6;
+    background-color: $mainBlueColor;
+    color: $whiteColor;
     text-decoration: none;
     padding: 10px;
     margin: 10px;

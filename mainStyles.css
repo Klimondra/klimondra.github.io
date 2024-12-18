@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Proměnné */
 * {
   margin: 0;
   padding: 0;
@@ -328,7 +329,7 @@ html {
 WIP: PROJEKTY
 
 .projekty {
-    background-color: #00171F;
+    background-color: $darkColor;
     height: 600px;
 }
 
