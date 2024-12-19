@@ -5,27 +5,54 @@ $whiteColor: #F4F4F6;
 
 /* Animace */
 
-@keyframes fadeSlideLeft {
-  0% {
-    transform: translateX(-2%);
+@keyframes appearHeading {
+  from {
+    opacity: 0;
+    filter: blur(7px);
+    scale: 0.7;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-  100% {
-    transform: translateX(0);
+  to {
     opacity: 1;
   }
 }
 
-@keyframes fadeSlideRight {
-  0% {
-    transform: translateX(2%);
+@keyframes slideLeft {
+  from {
+    transform: translateX(-10%);
     opacity: 0;
+    filter: blur(7px);
   }
-  100% {
+  to {
     transform: translateX(0);
     opacity: 1;
+    filter: blur(0);
   }
 }
+
+@keyframes slideRight {
+  from {
+    transform: translateX(10%);
+    opacity: 0;
+    filter: blur(7px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 
 
 /* Základní styly */
@@ -187,7 +214,7 @@ html {
 }
 
 .HlavniNadpis {
-  animation: slideDown 1s ease-out forwards;
+  animation: appearHeading 1s ease-out;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
   font-size: 108px;
@@ -199,7 +226,10 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: 21px;
+  opacity: 0;
   color: $whiteColor;
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .landBtns {
@@ -313,7 +343,9 @@ html {
 }
 
 .aboutnadpis {
-  animation: fadeSlideLeft ease-in-out 1s;
+  animation: slideLeft ease-in-out 1s both;
+  animation-timeline: view();
+  animation-range: contain 7% contain 35%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 72px;
@@ -446,7 +478,9 @@ WIP: PROJEKTY
 }
 
 .flwnadpis {
-  animation: fadeSlideRight ease-in-out 1s;
+  animation: slideRight ease-in-out 1s both;
+  animation-timeline: view();
+  animation-range: contain 7% contain 35%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 72px;
@@ -693,6 +727,7 @@ WIP: PROJEKTY
   text-align: center;
   display: flex;
   flex-direction: column;
+  animation: appearHeading 1s ease-out;
 
   h2 {
     font-size: 42px;
