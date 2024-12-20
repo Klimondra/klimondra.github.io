@@ -305,6 +305,7 @@ body {
   animation: slideRight ease-in-out 1s both;
   animation-timeline: view();
   animation-range: contain 7% contain 30%;
+  // TODO: Opravit přesah nadpisu a vytváření tak horizontální osy a bílého místa na pravo
 }
 
 .aboutpodnadpis, .flwpodnadpis {
