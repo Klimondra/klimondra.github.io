@@ -38,7 +38,7 @@ $colors: (
 }
 
 @mixin slide($direction) {
-  $translate: if($direction == 'left', -10%, 10%);
+  $translate: if($direction == 'left', -50px, 50px);
   from {
     transform: translateX($translate);
     opacity: 0;
@@ -50,6 +50,7 @@ $colors: (
     filter: blur(0);
   }
 }
+
 
 @keyframes slideLeft  { @include slide('left');  }
 @keyframes slideRight { @include slide('right'); }
@@ -65,6 +66,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
 // Header & Navigation
@@ -302,7 +304,7 @@ body {
   @extend .aboutnadpis;
   animation: slideRight ease-in-out 1s both;
   animation-timeline: view();
-  animation-range: contain 7% contain 35%;
+  animation-range: contain 7% contain 30%;
 }
 
 .aboutpodnadpis, .flwpodnadpis {

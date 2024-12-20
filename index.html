@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="otherAssets/fontawesome-free-icons/css/brands.css">
     <link rel="stylesheet" href="otherAssets/fontawesome-free-icons/css/solid.css">
     <link rel="stylesheet" href="otherAssets/fontawesome-free-icons/css/fontawesome.css">
-
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -25,104 +25,6 @@
             &#9776;
         </div>
     </header>
-
-    <script>
-        // JavaScript pro změnu barvy pozadí při scrollování
-        const header = document.querySelector('.header');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("btnMajor").addEventListener("click", function () {
-                const target = document.getElementById("aboutme");
-
-                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
-
-                // Hladké posunutí na vypočítanou pozici
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth"
-                });
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("btnMinor").addEventListener("click", function () {
-                const target = document.getElementById("followme");
-
-                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
-
-                // Hladké posunutí na vypočítanou pozici
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth"
-                });
-            });
-        });
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("navWhoBtn").addEventListener("click", function () {
-                const target = document.getElementById("aboutme");
-
-                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
-
-                // Hladké posunutí na vypočítanou pozici
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth"
-                });
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("navFlwBtn").addEventListener("click", function () {
-                const target = document.getElementById("followme");
-
-                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
-
-                // Hladké posunutí na vypočítanou pozici
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth"
-                });
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("navLogo").addEventListener("click", function () {
-                const target = document.getElementById("Landing");
-
-                // Získání aktuální pozice elementu a odečtení offsetu (např. 100px)
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY - 200;
-
-                // Hladké posunutí na vypočítanou pozici
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth"
-                });
-            });
-        });
-
-        // Přepínání menu
-        const menuIcon = document.getElementById('menuIcon');
-        const navbar = document.querySelector('.navbar');
-
-        menuIcon.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-
-        </script>
 
     <section id="Landing">
         <div class="landContent">
@@ -165,7 +67,7 @@
     </section>
 
     <section class="footer">
-        <h4 class="footertext">Vyvtořil Klimondra s HTML & CSS & <i class="fa-solid fa-heart"></i> v roce 2024</h4>
+        <h4 class="footertext">Vyvtořil Klimondra s HTML & SCSS & <i class="fa-solid fa-heart"></i> v roce 2024</h4>
     </section>
 </body>
 </html>

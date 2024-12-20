@@ -20,7 +20,7 @@
 }
 @keyframes slideLeft {
   from {
-    transform: translateX(-10%);
+    transform: translateX(-50px);
     opacity: 0;
     filter: blur(7px);
   }
@@ -32,7 +32,7 @@
 }
 @keyframes slideRight {
   from {
-    transform: translateX(10%);
+    transform: translateX(50px);
     opacity: 0;
     filter: blur(7px);
   }
@@ -54,6 +54,7 @@ html {
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
@@ -352,7 +353,7 @@ body {
 .flwnadpis {
   animation: slideRight ease-in-out 1s both;
   animation-timeline: view();
-  animation-range: contain 7% contain 35%;
+  animation-range: contain 7% contain 30%;
 }
 
 .aboutpodnadpis, .flwpodnadpis {
