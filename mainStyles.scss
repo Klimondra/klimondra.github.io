@@ -38,7 +38,17 @@ $colors: (
 }
 
 @mixin slide($direction) {
-  $translate: if($direction == 'left', -50px, 50px);
+  @media (max-width: 480px) {
+    from {
+      opacity: 0;
+      filter: blur(7px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  $translate: if($direction == 'left', -10%, 10%);
   from {
     transform: translateX($translate);
     opacity: 0;
@@ -62,7 +72,7 @@ $colors: (
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth;  }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
