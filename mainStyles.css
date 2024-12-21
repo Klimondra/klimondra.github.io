@@ -19,7 +19,7 @@
   }
 }
 @keyframes slideLeft {
-  @media (max-width: 480px) {
+  @media (max-width: 770px) {
     from {
       opacity: 0;
       filter: blur(7px);
@@ -41,7 +41,7 @@
   }
 }
 @keyframes slideRight {
-  @media (max-width: 480px) {
+  @media (max-width: 770px) {
     from {
       opacity: 0;
       filter: blur(7px);
