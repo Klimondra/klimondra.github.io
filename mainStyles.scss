@@ -38,16 +38,6 @@ $colors: (
 }
 
 @mixin slide($direction) {
-  @media (max-width: 770px) {
-    from {
-      opacity: 0;
-      filter: blur(7px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0);
-    }
-  }
   $translate: if($direction == 'left', -10%, 10%);
   from {
     transform: translateX($translate);
@@ -64,6 +54,19 @@ $colors: (
 
 @keyframes slideLeft  { @include slide('left');  }
 @keyframes slideRight { @include slide('right'); }
+
+@media (max-width: 770px) {
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      filter: blur(7px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+}
 
 // Base styles
 * {
@@ -315,7 +318,6 @@ body {
   animation: slideRight ease-in-out 1s both;
   animation-timeline: view();
   animation-range: contain 7% contain 30%;
-  // TODO: Opravit přesah nadpisu a vytváření tak horizontální osy a bílého místa na pravo
 }
 
 .aboutpodnadpis, .flwpodnadpis {
@@ -354,6 +356,7 @@ body {
   color: black;
   border-radius: 50%;
   margin-left: 15px;
+  margin-bottom: 15px;
   transition: border-radius 0.4s ease;
 
   &:hover { border-radius: 25%; }
