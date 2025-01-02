@@ -18,6 +18,12 @@
 .fa-brands {
   font-weight: 400; }
 
+/* Custom */
+.cfa-printables:before {
+
+}
+/* Regular */
+
 .fa-monero:before {
   content: "\f3d0"; }
 
